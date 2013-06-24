@@ -180,7 +180,7 @@
 
 
 - (void)setSelectedIndexPath:(NSIndexPath *)indexPath {
-	if (![_selectedIndexPath isEqual:indexPath]) {
+	//if (![_selectedIndexPath isEqual:indexPath]) {
 		NSIndexPath *oldIndexPath = [_selectedIndexPath copy];
 		
 		_selectedIndexPath = indexPath;
@@ -197,7 +197,7 @@
 						atIndexPath:_selectedIndexPath
 					 deselectedView:deselectedView];
 		}
-	}
+	//}
 }
 
 #pragma mark -
@@ -319,9 +319,9 @@
 
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	// Don't allow the currently selected cell to be selectable
-	if ([_selectedIndexPath isEqual:indexPath]) {
-		return nil;
-	}
+	//if ([_selectedIndexPath isEqual:indexPath]) {
+	//	return nil;
+	//}
 	return indexPath;
 }
 
